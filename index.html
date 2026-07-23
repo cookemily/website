@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Cook | Geophysicist & Geospatial Analyst</title>
+    
+    <!-- CSS & Fonts -->
+<!-- Google Font: Manrope -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Leaflet.js for Interactive Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+
+    <div class="site-container">
+        <!-- HEADER / HERO -->
+        <header class="hero-header">
+            <div class="hero-content">
+                <h1>Emily <span>Cook</span></h1>
+                <p class="subtitle">Geophysicist | Binghamton University '26</p>
+                <div class="status-tags">
+                    <span class="tag"><i class="fa-solid fa-location-dot"></i> USBR Intern</span>
+                    <span class="tag"><i class="fa-solid fa-compass"></i> Incoming USGS</span>
+                    <span class="tag accent"><i class="fa-solid fa-graduation-cap"></i> Seeking Fall '27 Grad Programs</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="Emily_Cook_CV.pdf" target="_blank" class="btn btn-primary"><i class="fa-solid fa-file-pdf"></i> Download CV</a>
+                <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-envelope"></i> Contact Me</a>
+            </div>
+        </header>
+
+        <!-- MAIN LAYOUT GRID -->
+        <main class="main-grid">
+            
+            <!-- ABOUT -->
+<section class="card grid-about">
+    <div class="about-text">
+        <h2>About</h2>
+        <p class="summary">
+            Geophysicist specializing in geothermal energy, hydrogeophysics, and geospatial data analytics. Driven by data-backed solutions to water and energy resource challenges. Special interests in Arctic energy systems and energy policy.
+        </p>
+        <p class="summary">
+            Recent graduate currently interning with the <strong>U.S. Bureau of Reclamation</strong> and incoming at the <strong>U.S. Geological Survey New York Water Science Center</strong>.
+        </p>
+        <p class="summary">
+            Lover of all things outdoors. I grew up near the ocean and was natural an avid beach-goer, but I have grown into chasing my love of the mountains. Geophysics has been the perfect balance of in-field and office work to continuously challenge myself.
+        </p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="about-photo-grid">
+        <div class="photo-box">
+            <img src="emily1.jpg" alt="Emily Cook presenting GtX research">
+        </div>
+        <div class="photo-box">
+            <img src="emily2.jpg" alt="Summiting Huron Peak (first 14er!) as the Knicks won">
+        </div>
+    </div>
+</section>
+
+            <!-- PUBLICATIONS & NEWS -->
+            <section class="card grid-pubs-news">
+                <h2>Publications & In The News</h2>
+                
+                <!-- Publication Featured Card -->
+                <div class="pub-card">
+                    <p class="citation">
+                        Cook, E., & de Witt, M. (2025). Assessing the Feasibility of Geothermal-to-X for Sustainable Maritime Refueling in Alaska. <em>Clean Technologies</em>, 7(4), 115.
+                    </p>
+                    <a href="https://doi.org/10.3390/cleantechnol7040115" target="_blank" class="link-btn">
+                        Read Paper <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <!-- News Items -->
+                <div class="news-list">
+                    <h3>Media & Highlights</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.binghamton.edu/news/story/6166/art-of-science-to-unveil-winners-during-research-days?" target="_blank">
+                                Art of Science to unveil winners during Research Days <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.wbng.com/video/2026/04/29/binghamton-university-art-science-exhibit-opens-public/" target="_blank">
+                                Binghamton University Art of Science exhibit opens <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://peerj.com/blog/post/115284890753/peerj-award-winner-at-arctic-frontiers-2026/" target="_blank">
+                                PeerJ Award Winner at Arctic Frontiers 2026 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.uaf.edu/acep-blog/from-internship-to-publication-undergraduate-interns-achieve-first-author-papers.php" target="_blank">
+                                From Internship to Publication: First-Author Undergraduate Papers <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.uaf.edu/acep/news/2025/feasibility-of-geothermal-energy-of-the-aleutian-islands.php" target="_blank">
+                                Feasibility of Geothermal Energy in Aleutian Islands <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- INTERACTIVE FIELDWORK MAP -->
+            <section class="card grid-map">
+                <div class="map-header">
+                    <h2><i class="fa-solid fa-map-location-dot"></i> Research Locations</h2>
+                </div>
+                <div id="field-map"></div>
+            </section>
+
+            <!-- PORTFOLIO / WORK SHOWCASE WITH FILTERS -->
+            <section class="card grid-portfolio" id="portfolio">
+                <div class="portfolio-header">
+                    <h2><i class="fa-solid fa-layer-group"></i> Research, Fieldwork & Projects</h2>
+                    
+                    <!-- Filter Buttons -->
+                    <div class="filter-bar">
+                        <button class="filter-btn active" data-filter="all">All Work</button>
+                        <button class="filter-btn" data-filter="geophysics">Geophysics</button>
+                        <button class="filter-btn" data-filter="maps">Mapping</button>
+                        <button class="filter-btn" data-filter="field">Field</button>
+                        <button class="filter-btn" data-filter="policy">Policy</button>
+                        <button class="filter-btn" data-filter="energy">Energy</button>
+                    </div>
+                </div>
+
+                <!-- PORTFOLIO GRID -->
+                <div class="portfolio-grid">
+
+                    <!-- Project 1 -->
+                    <div class="portfolio-card" data-category="geophysics field">
+                        <span class="year-badge">2026</span>
+                        <h3>U.S. Bureau of Reclamation - Geophysics & Seismology</h3>
+                        <p class="caption">SRT, MASW, ERT, tTEM, and GPR field surveys at Reclamation facilities to support infrastructure assessments; helped develop Bureau-wide seismic hazard geodatabase.</p>
+                        <div class="media-row">
+                            <img src="usbr1.jpg" alt="ERT and SRT for Canal Seepage">
+                            <img src="usbr2.jpg" alt="Tour of Grand Coulee">
+                            <img src="usbr3.jpg" alt="TEM2GO at Proposed Dam">
+                            <img src="usbr4.jpg" alt="Geophones on Landslide">
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="portfolio-card" data-category="maps">
+                        <span class="year-badge">2026</span>
+                        <h3>Arctic Arteries - Art of Science Winner</h3>
+                        <p class="caption">Illustrating intricate meander patterns of Arctic river systems along the Dalton Highway and Yukon Flats. Winner in Binghamton's Art of Science competition.</p>
+                        <div class="media-row">
+                            <img src="yukon1.jpg" alt="Yukon Flats Pink Map">
+                            <img src="yukon2.jpg" alt="Yukon Flats Blue Map">
+                            <img src="yukon3.jpg" alt="Yukon Flats Green Map">
+                            <img src="yukon4.jpg" alt="Dalton Highway Excursion">
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="portfolio-card" data-category="energy policy">
+                        <span class="year-badge">2026</span>
+                        <h3>Arctic Frontiers - Outstanding Poster Award</h3>
+                        <p class="caption">Presented Geothermal-to-X research in Tromsø, Norway. Awarded the PeerJ Outstanding Poster Award with frameworks for Indigenous community-led energy equity.</p>
+                        <div class="media-row">
+                            <img src="norway1.jpg" alt="Geothermal-to-X Poster">
+                            <img src="norway2.jpg" alt="Arctic Frontiers Conference">
+                            <img src="norway3.jpg" alt="Tromsø Fjords">
+                            <img src="norway4.jpg" alt="Northern Lights">
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="portfolio-card" data-category="energy maps policy">
+                        <span class="year-badge">2025</span>
+                        <h3>Geothermal-to-X Energy in Alaska</h3>
+                        <p class="caption">During an REU at Alaska Center for Energy and Power (ACEP), developed novel research in Geothermal-to-X power to fill gaps in growing Arctic maritime decarbonization. Published in <em>Clean Technologies</em>.</p>
+                        <div class="media-row">
+                            <img src="gtx1.jpg" alt="Alaska Potential GtX Locations">
+                            <img src="gtx2.jpg" alt="Geothermal-to-X Process Diagram">
+                            <img src="gtx3.jpg" alt="GVEA BESS Station">
+                            <img src="gtx4.jpg" alt="Presented at GEODE conference">
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="portfolio-card" data-category="maps">
+                        <span class="year-badge">2025</span>
+                        <h3>Cartography & Digital Elevation Models</h3>
+                        <p class="caption">Bridging technical spatial tools with artistic vision. Features DEM visualizations of the Adirondack High Peaks inspired by Joy Division's album art, fluvial networks, and custom GIS mapping.</p>
+                        <div class="media-row">
+                            <img src="map1.jpg" alt="Adirondack High Peaks">
+                            <img src="map2.jpg" alt="Long Island Sound Bathymetry">
+                            <img src="map3.jpg" alt="Southern Tier Fluvial Network">
+                            <img src="map4.jpg" alt="National Park Service Alaska">
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="portfolio-card" data-category="geophysics field maps">
+                        <span class="year-badge">2025</span>
+                        <h3>Geophysical Monitoring of Wood Ash</h3>
+                        <p class="caption">Monitored dissolved ion transport in soil resistivity using Electrical Resistivity Tomography (ERT) and Electromagnetic Induction (EMI) as part of environmental geophysics research.</p>
+                        <div class="media-row">
+                            <img src="ash1.jpg" alt="ERT Inversion">
+                            <img src="ash2.jpg" alt="Python-Generated Field Site Map">
+                            <img src="ash3.jpg" alt="Wood Ash Field Site">
+                            <img src="ash4.jpg" alt="EMI Collected Points">
+                        </div>
+                    </div>
+                    <!-- Project 7 -->
+                    <div class="portfolio-card" data-category="policy">
+                        <span class="year-badge">2025</span>
+                        <h3>Comparative Permafrost Policy Analysis</h3>
+                        <p class="caption">Analyzed international climate policy, writing a comparative thesis on national permafrost thaw response frameworks and infrastructure adaptation in Russia vs. Canada.</p>
+                        <div class="media-row">
+                            <img src="permafrost1.jpg" alt="Permafrost Thaw Model Figure">
+                            <img src="permafrost2.jpg" alt="USACE Permafrost Tunnel Section">
+                            <img src="permafrost3.jpg" alt="Permafrost Soil Horizon Probe">
+                            <img src="permafrost4.jpg" alt="Permafrost Thawed Roads">
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="portfolio-card" data-category="geophysics maps">
+                        <span class="year-badge">2025</span>
+                        <h3>Kilauea Summit Collapse Seismicity</h3>
+                        <p class="caption">Mapped 2018 summit collapse seismicity using USGS seismic network data during Texas A&M's Geophysics Summer School with Dr. Xiaowei Chen.</p>
+                        <div class="media-row">
+                            <img src="hawaii1.jpg" alt="Kilauea Earthquake Distribution">
+                            <img src="hawaii2.jpg" alt="GPS Displacement">
+                            <img src="hawaii3.jpg" alt="Summit Collapse Graph">
+                            <img src="hawaii4.jpg" alt="Touring International Ocean Drilling Program facility">
+                        </div>
+                    </div>
+
+                    <!-- Project 9 -->
+                    <div class="portfolio-card" data-category="energy maps">
+                        <span class="year-badge">2024 - 2025</span>
+                        <h3>Direct Use Geothermal (DDU)</h3>
+                        <p class="caption">Funded by Binghamton's Summer Scholars Program with Dr. Pietras. Synthesized and interpolated 1,000+ O&G well logs across NY/PA to evaluate deep geothermal heat potential on campus.</p>
+                        <div class="media-row">
+                            <img src="ddu1.jpg" alt="Geothermal Subsurface Cross Section">
+                            <img src="ddu2.jpg" alt="SSAP Final Presentation">
+                            <img src="ddu3.jpg" alt="SSAP Poster">
+                            <img src="ddu4.jpg" alt="ESOGIS https://esogis.nysm.nysed.gov/">
+                        </div>
+                    </div>
+
+                    <!-- Project 10 -->
+                    <div class="portfolio-card" data-category="geophysics field maps">
+                        <span class="year-badge">2024</span>
+                        <h3>Smartphone Magnetometry & Orphaned Wells</h3>
+                        <p class="caption">Evaluated low-cost citizen science tools by comparing UAV-mounted magnetometers to internal smartphone sensors to detect abandoned oil and gas infrastructure across field sites.</p>
+                        <div class="media-row">
+                            <img src="mag1.jpg" alt="UAV Magnetometer Setup">
+                            <img src="mag2.jpg" alt="Smartphone Magnetometer Recording">
+                            <img src="mag3.jpg" alt="Walking to Field Site">
+                            <img src="mag4.jpg" alt="https://www.usgs.gov/media/images/density-unplugged-orphaned-wells-continental-us">
+                        </div>
+                    </div>
+
+                    <!-- Project 11 -->
+                    <div class="portfolio-card" data-category="geophysics maps">
+                        <span class="year-badge">2022 - 2024</span>
+                        <h3>First Year Research Immersion</h3>
+                        <p class="caption">Leveraged Thermal Infrared (TIR) UAV imagery to model seasonality of Submarine Groundwater Discharge (SGD) in Rapa Nui (Easter Island) and freshwater lakes in Green Lakes, NY for basin characterization.</p>
+                        <div class="media-row">
+                            <img src="sgd1.jpg" alt="UAV-TIR SGD Theory">
+                            <img src="sgd2.jpg" alt="Rapa Nui Coastal SGD Map">
+                            <img src="sgd3.jpg" alt="Mapping SGD Via Canoe">
+                            <img src="sgd4.jpg" alt="Canoe Fieldwork Gear Prep">
+                        </div>
+                    </div>
+
+                    <!-- Project 12 -->
+                    <div class="portfolio-card" data-category="field">
+                        <span class="year-badge">2023</span>
+                        <h3>Western National Parks Field Expedition</h3>
+                        <p class="caption">2.5-week geology and conservation field course camping across Capitol Reef, Bryce Canyon, Yellowstone, and Grand Teton National Parks.</p>
+                        <div class="media-row">
+                            <img src="west1.jpg" alt="Jenny Lake via Canoe">
+                            <img src="west2.jpg" alt="Grand Tetons Vista">
+                            <img src="west3.jpg" alt="Yellowstone Thermal Hydrothermal Feature">
+                            <img src="west4.jpg" alt="Bryce Canyon Hoodoos">
+                        </div>
+                    </div>
+
+                    <!-- Project 13 -->
+                    <div class="portfolio-card" data-category="field">
+                        <span class="year-badge">2023</span>
+                        <h3>Everglades Ecology Field Course</h3>
+                        <p class="caption">Two-week field-intensive study in Everglades National Park focused on wetland hydrology, species interactions, and cypress dome wading surveys.</p>
+                        <div class="media-row">
+                            <img src="everglades1.jpg" alt="Gator Spotting in Hydrologic Canal">
+                            <img src="everglades2.jpg" alt="Anhinga Bird Survey">
+                            <img src="everglades3.jpg" alt="Snake in Wetland Vegetation">
+                            <img src="everglades4.jpg" alt="Wading through Cypress Dome">
+                        </div>
+                    </div>
+
+                    <!-- Project 14 -->
+                    <div class="portfolio-card" data-category="field">
+                        <span class="year-badge">2022 - 2026</span>
+                        <h3>Ultimate Frisbee - Team Captain</h3>
+                        <p class="caption">Captain for Binghamton Big Bear. Managed travel, logistics, and practices while competing at College Nationals twice and building team culture.</p>
+                        <div class="media-row">
+                            <img src="frisbee1.jpg" alt="College National Championship 2023">
+                            <img src="frisbee2.jpg" alt="Big Bear Team Captains">
+                            <img src="frisbee3.jpg" alt="Mid-game action">
+                            <video autoplay loop muted playsinline class="portfolio-video" data-alt="Ultimate Frisbee Travel Video">
+                                <source src="frisbee4.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section class="card grid-contact" id="contact">
+                <h2>Contact</h2>
+                <p>I'd love to hear from anyone with research opportunities, questions, or collaborations</p>
+                <div class="contact-links">
+                    <a href="mailto:emilycook2022@gmail.com" class="contact-item">
+                        <i class="fa-solid fa-envelope"></i> emilycook2022@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/emily-cook-07b859256/" target="_blank" class="contact-item">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://orcid.org/0009-0006-1237-5071" target="_blank" class="contact-item">
+                        <i class="fa-brands fa-orcid"></i> ORCID Profile
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Emily Cook</p>
+        </footer>
+    </div>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged view">
+        <video class="lightbox-video" id="lightbox-vid" controls></video>
+        <div id="caption"></div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        
+        /* 1. LEAFLET MAP SETUP (DARK MATTER TILESET) */
+        const map = L.map('field-map').setView([48.0, -98.0], 3);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 18
+        }).addTo(map);
+
+        const locations = [
+            // USBR & Seismology Field Locations
+            { name: "USBR Field Surveys & Grand Coulee Dam, WA", year: "2026", lat: 47.9558, lng: -118.9818, desc: "SRT, MASW, ERT, and TEM surveys for infrastructure & seismic risk geodatabase." },
+            { name: "Green Mountain Dam, CO", year: "2026", lat: 39.8767, lng: -106.3314, desc: "USBR engineering geophysics surveys and dam infrastructure safety evaluation." },
+            { name: "Pueblo Dam, CO", year: "2026", lat: 38.2547, lng: -104.7323, desc: "USBR seismology and engineering geophysics field investigations." },
+            { name: "Springwood Ranch, WA", year: "2026", lat: 47.0900, lng: -120.7100, desc: "Near-surface geophysics survey site with U.S. Bureau of Reclamation." },
+            { name: "Soap Lake, WA", year: "2026", lat: 47.3918, lng: -119.4800, desc: "Geophysical surveys around unique meromictic mineral lake system." },
+
+            // Conferences & Art
+            { name: "GEODE Conference — Reno, NV", year: "2025", lat: 39.5296, lng: -119.8138, desc: "Attended Project InnerSpace / GEODE Student Days focusing on geothermal innovation." },
+            { name: "Arctic Frontiers — Tromsø, Norway", year: "2026", lat: 69.6492, lng: 18.9553, desc: "Presented Geothermal-to-X maritime refueling research; PeerJ Award winner." },
+            { name: "Yukon Flats & Dalton Highway, AK", year: "2026", lat: 66.5622, lng: -145.3120, desc: "Arctic river meandering research & inspiration for 'Arctic Arteries'." },
+
+            // Groundwater & Hydrogeology
+            { name: "Green Lakes State Park — Syracuse, NY", year: "2024", lat: 43.0490, lng: -75.9730, desc: "Evaluated Submarine Groundwater Discharge (SGD) detection in meromictic lakes." },
+            { name: "Rapa Nui Submarine Groundwater Discharge", year: "2022 - 2024", lat: -27.1127, lng: -109.3497, desc: "Evaluated coastal SGD using Thermal Infrared (TIR) UAV imagery." },
+            
+            // Research & Field Courses
+            { name: "Kilauea Summit Collapse, HI", year: "2025", lat: 19.4069, lng: -155.2834, desc: "Mapped 2018 summit collapse seismicity during TAMU Summer School." },
+            { name: "Direct Use Geothermal — Binghamton, NY", year: "2024 - 2025", lat: 42.0987, lng: -75.9180, desc: "Synthesized 1,000+ well records across NY/PA for deep geothermal evaluation." },
+            { name: "Everglades Field Course, FL", year: "2023", lat: 25.2866, lng: -80.8987, desc: "Field ecology & hydrogeology study in Everglades National Park." },
+            { name: "Western National Parks Expedition", year: "2023", lat: 43.7904, lng: -110.6818, desc: "Field geology course across Grand Tetons, Yellowstone, Bryce, and Capitol Reef." }
+        ];
+
+        const customIcon = L.divIcon({
+            className: 'custom-map-pin',
+            html: `<div style="background:#f59e0b; width:12px; height:12px; border-radius:50%; border:2px solid #fff; box-shadow:0 0 10px #f59e0b;"></div>`,
+            iconSize: [12, 12],
+            iconAnchor: [6, 6]
+        });
+
+        locations.forEach(loc => {
+            const popup = `<div class="map-popup"><h4>${loc.name}</h4><span>${loc.year}</span><p>${loc.desc}</p></div>`;
+            L.marker([loc.lat, loc.lng], { icon: customIcon }).addTo(map).bindPopup(popup);
+        });
+
+        /* 2. CATEGORY FILTER SYSTEM */
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.portfolio-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+                cards.forEach(card => {
+                    const categories = card.dataset.category.split(' ');
+                    if (filter === 'all' || categories.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        /* 3. LIGHTBOX SYSTEM */
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxVid = document.getElementById('lightbox-vid');
+        const captionText = document.getElementById('caption');
+
+        document.querySelectorAll('.media-row img, .media-row video').forEach(element => {
+            element.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                
+                if (element.tagName.toLowerCase() === 'video') {
+                    lightboxImg.style.display = 'none';
+                    lightboxVid.style.display = 'block';
+                    const videoSource = element.querySelector('source').src;
+                    lightboxVid.src = videoSource;
+                    captionText.innerHTML = element.getAttribute('data-alt') || "Video Showcase";
+                    lightboxVid.play();
+                } else {
+                    lightboxVid.style.display = 'none';
+                    lightboxImg.style.display = 'block';
+                    lightboxImg.src = element.src;
+                    captionText.innerHTML = element.alt;
+                    lightboxVid.pause();
+                    lightboxVid.src = "";
+                }
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.style.display = 'none';
+            lightboxVid.pause();
+            lightboxVid.src = "";
+        };
+
+        document.querySelector('.close-btn').addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.classList.contains('close-btn')) {
+                closeLightbox();
+            }
+        });
+
+        // Prevent dragging/context menu on images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('contextmenu', e => e.preventDefault());
+            img.addEventListener('dragstart', e => e.preventDefault());
+        });
+    });
+    </script>
+</body>
+</html>

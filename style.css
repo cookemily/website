@@ -361,12 +361,6 @@ body {
     border-radius: 8px;
     cursor: pointer;
     border: 1px solid var(--border-earth);
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.media-row img:hover, .media-row video:hover {
-    border-color: var(--clay-accent);
-    transform: scale(1.02);
 }
 
 /* CONTACT */

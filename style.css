@@ -1,19 +1,19 @@
 /* ==========================================================================
-   OUTDOORS & EARTH-SCIENCE CUSTOM STYLESHEET
+   STYLESHEET (ENHANCED)
    ========================================================================== */
 
 :root {
-    --bg-sand: #000000;           /* Soft trail map paper background */
-    --card-slate: #1C2420;        /* Deep evergreen charcoal card */
-    --card-inset: #141A17;        /* Darker inner panel background */
-    --border-earth: #2E3A33;      /* Muted earth outline */
+    --bg-sand: #000000;
+    --card-slate: #1C2420;
+    --card-inset: #141A17;
+    --border-earth: #2E3A33;
     
-    --text-light: #F1F3F1;        /* Clean header text */
-    --text-body: #C5CCC7;         /* Body copy */
-    --text-dark: #2A332D;         /* Dark text for light elements */
+    --text-light: #F1F3F1;        /* HEADER */
+    --text-body: #C5CCC7;         /* BODY */
+    --text-dark: #2A332D;         /* DARK TEXT */
     
-    --clay-accent: #D36A4C;       /* Terracotta warm accent */
-    --sage-accent: #8DAA91;       /* Mountain sage green */
+    --clay-accent: #D36A4C;
+    --sage-accent: #8DAA91; 
     --sand-tag: #E6E4DC;
 }
 
@@ -31,7 +31,6 @@ body {
     padding: 24px;
     -webkit-font-smoothing: antialiased;
 }
-}
 
 .site-container {
     max-width: 1140px;
@@ -43,7 +42,7 @@ body {
     background: var(--card-slate);
     border-radius: 16px;
     padding: 2.5rem;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -100,7 +99,7 @@ body {
     color: var(--clay-accent);
 }
 
-/* Buttons */
+/* BUTTONS */
 .hero-actions {
     display: flex;
     gap: 12px;
@@ -134,11 +133,11 @@ body {
     background: var(--border-earth);
 }
 
-/* Cards */
+/* CARDS */
 .main-grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 32px;
 }
 
 .card {
@@ -151,20 +150,22 @@ body {
 .card h2 {
     font-family: 'Space Grotesk', sans-serif;
     color: var(--text-light);
-    font-size: 1.35rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
+    letter-spacing: -0.01em;
 }
 
-/* About & Hobbies */
+/* ABOUT */
 .grid-about {
     display: grid;
     grid-template-columns: 1.8fr 1fr;
-    gap: 24px;
+    gap: 28px;
     align-items: center;
 }
 
 .summary {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
+    line-height: 1.65;
     color: var(--text-light);
     margin-bottom: 12px;
 }
@@ -177,23 +178,24 @@ body {
 }
 
 .hobbies-strip span {
-    background: var(--card-inset);
+    background: rgba(141, 170, 145, 0.1);
     border: 1px solid var(--border-earth);
     color: var(--sage-accent);
-    font-size: 0.8rem;
-    padding: 4px 10px;
+    font-size: 0.88rem;
+    padding: 6px 14px;
     border-radius: 20px;
 }
 
 .photo-box img {
     width: 100%;
-    height: 240px;
+    height: 280px;
     object-fit: cover;
     border-radius: 12px;
     border: 1px solid var(--border-earth);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Publications */
+/* PUBS */
 .pub-card {
     background: var(--card-inset);
     border-left: 3px solid var(--clay-accent);
@@ -215,6 +217,7 @@ body {
 .citation {
     margin: 8px 0;
     color: var(--text-light);
+    font-size: 1rem;
 }
 
 .link-btn {
@@ -238,7 +241,7 @@ body {
 .news-list a {
     color: var(--text-light);
     text-decoration: none;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     display: block;
     margin-bottom: 6px;
 }
@@ -247,7 +250,7 @@ body {
     color: var(--clay-accent);
 }
 
-/* Map */
+/* MAP */
 #field-map {
     height: 380px;
     width: 100%;
@@ -259,7 +262,7 @@ body {
 .map-popup span { color: var(--clay-accent); font-size: 0.75rem; font-weight: bold; }
 .map-popup p { font-size: 0.82rem; color: #4A554D; margin-top: 4px; }
 
-/* Portfolio */
+/* PORTFOLIO */
 .portfolio-header {
     display: flex;
     justify-content: space-between;
@@ -269,17 +272,18 @@ body {
     margin-bottom: 20px;
 }
 
-.filter-bar { display: flex; gap: 6px; flex-wrap: wrap; }
+.filter-bar { display: flex; gap: 8px; flex-wrap: wrap; }
 
 .filter-btn {
     background: var(--card-inset);
     border: 1px solid var(--border-earth);
     color: var(--text-body);
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 0.82rem;
-    transition: all 0.2s;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 .filter-btn.active, .filter-btn:hover {
@@ -288,67 +292,84 @@ body {
     border-color: var(--clay-accent);
 }
 
+.filter-btn.active {
+    box-shadow: 0 0 12px rgba(211, 106, 76, 0.4);
+}
+
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 24px;
 }
 
 .portfolio-card {
     background: var(--card-inset);
     border: 1px solid var(--border-earth);
-    border-radius: 12px;
-    padding: 1.25rem;
+    border-radius: 14px;
+    padding: 1.5rem;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-card:hover {
+    border-color: var(--clay-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 .year-badge {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 20px;
+    right: 20px;
     background: var(--border-earth);
     color: var(--sage-accent);
-    font-size: 0.75rem;
-    padding: 2px 8px;
-    border-radius: 4px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
 }
 
 .portfolio-card h3 {
     color: var(--text-light);
-    font-size: 1.05rem;
-    margin-bottom: 6px;
-    padding-right: 45px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    padding-right: 55px;
 }
 
 .caption {
-    font-size: 0.86rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
     color: var(--text-body);
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 }
 
 .media-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 .media-row img, .media-row video {
     width: 100%;
-    height: 68px;
+    height: 130px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     border: 1px solid var(--border-earth);
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .media-row img:hover, .media-row video:hover {
     border-color: var(--clay-accent);
+    transform: scale(1.02);
 }
 
-/* Contact & Lightbox */
+/* CONTACT */
 .contact-links { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
 .contact-item { color: var(--sage-accent); text-decoration: none; font-size: 0.95rem; }
 .contact-item:hover { color: var(--clay-accent); }
@@ -378,4 +399,5 @@ footer {
 @media (max-width: 768px) {
     .grid-about { grid-template-columns: 1fr; }
     .hero-header { flex-direction: column; align-items: flex-start; }
+    .portfolio-grid { grid-template-columns: 1fr; }
 }

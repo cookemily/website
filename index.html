@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emily Cook | Geophysicist & Geospatial Analyst</title>
     
-    <!-- CSS & Fonts -->
-<!-- Google Font: Manrope -->
+    <!-- STYLE -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,14 +13,14 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Leaflet.js for Interactive Map -->
+    <!-- Leaflet.js -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
 
     <div class="site-container">
-        <!-- HEADER / HERO -->
+        <!-- HEADER  -->
         <header class="hero-header">
             <div class="hero-content">
                 <h1>Emily <span>Cook</span></h1>
@@ -56,7 +55,7 @@
         </p>
     </div>
 
-    <!-- Photo Grid -->
+    <!-- PHOTOS -->
     <div class="about-photo-grid">
         <div class="photo-box">
             <img src="emily1.jpg" alt="Emily Cook presenting GtX research">
@@ -71,7 +70,6 @@
             <section class="card grid-pubs-news">
                 <h2>Publications & In The News</h2>
                 
-                <!-- Publication Featured Card -->
                 <div class="pub-card">
                     <p class="citation">
                         Cook, E., & de Witt, M. (2025). Assessing the Feasibility of Geothermal-to-X for Sustainable Maritime Refueling in Alaska. <em>Clean Technologies</em>, 7(4), 115.
@@ -81,7 +79,7 @@
                     </a>
                 </div>
 
-                <!-- News Items -->
+                <!-- NNEWS -->
                 <div class="news-list">
                     <h3>Media & Highlights</h3>
                     <ul>
@@ -128,12 +126,12 @@
                 <div id="field-map"></div>
             </section>
 
-            <!-- PORTFOLIO / WORK SHOWCASE WITH FILTERS -->
+            <!-- PORTFOLIO  -->
             <section class="card grid-portfolio" id="portfolio">
                 <div class="portfolio-header">
                     <h2><i class="fa-solid fa-layer-group"></i> Research, Fieldwork & Projects</h2>
                     
-                    <!-- Filter Buttons -->
+                    <!-- FILTERS -->
                     <div class="filter-bar">
                         <button class="filter-btn active" data-filter="all">All Work</button>
                         <button class="filter-btn" data-filter="geophysics">Geophysics</button>
@@ -153,10 +151,10 @@
                         <h3>U.S. Bureau of Reclamation - Geophysics & Seismology</h3>
                         <p class="caption">SRT, MASW, ERT, tTEM, and GPR field surveys and processing to support federal infrastructure and public safety; helped develop Bureau-wide seismic hazard geodatabase.</p>
                         <div class="media-row">
-                            <img src="usbr1.jpg" alt="ERT and SRT for Canal Seepage">
+                            <img src="usbr1.jpg" alt="Seismic Refraction Survey">
                             <img src="usbr2.jpg" alt="Tour of Grand Coulee">
-                            <img src="usbr3.jpg" alt="TEM2GO at Proposed Damsite">
-                            <img src="usbr4.jpg" alt="Geophones on Landslide">
+                            <img src="usbr3.jpg" alt="TEM2GO">
+                            <img src="usbr4.jpg" alt="Seismic Refraction Survey">
                         </div>
                     </div>
 
@@ -357,7 +355,7 @@
         </footer>
     </div>
 
-    <!-- LIGHTBOX MODAL -->
+    <!-- LIGHTBOX -->
     <div id="lightbox" class="lightbox">
         <span class="close-btn">&times;</span>
         <img class="lightbox-content" id="lightbox-img" alt="Enlarged view">
@@ -369,7 +367,7 @@
     <script>
     document.addEventListener("DOMContentLoaded", function () {
         
-        /* 1. LEAFLET MAP SETUP (DARK MATTER TILESET) */
+        /* 1. LEAFLET MAP SETUP */
         const map = L.map('field-map').setView([48.0, -98.0], 3);
 
         L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -379,25 +377,18 @@
         }).addTo(map);
 
         const locations = [
-            // USBR & Seismology Field Locations
+            // LOCATIONS
             { name: "Grand Coulee Dam, WA", year: "2026", lat: 47.9558, lng: -118.9818, desc: "Tour of the largest hydropower dam in the U.S." },
             { name: "Green Mountain Dam, CO", year: "2026", lat: 39.8767, lng: -106.3314, desc: "Tour of hydropower facility facing severe water shortage in Summer '26 drought." },
             { name: "Pueblo Dam, CO", year: "2026", lat: 38.2547, lng: -104.7323, desc: "U.S. Bureau of Reclamation Engineering Geophysics field investigations." },
             { name: "Springwood Ranch, WA", year: "2026", lat: 47.0900, lng: -120.7100, desc: "U.S. Bureau of Reclamation Engineering Geophysics field investigations." },
             { name: "Soap Lake, WA", year: "2026", lat: 47.3918, lng: -119.4800, desc: "U.S. Bureau of Reclamation Engineering Geophysics field investigations." },
             { name: "Vallecito Dam, CO", year: "2026", lat: 37.3922, lng: -107.5702, desc: "U.S. Bureau of Reclamation Engineering Geophysics field investigations." },
-
-
-            // Conferences & Art
             { name: "GEODE Conference — Reno, NV", year: "2025", lat: 39.5296, lng: -119.8138, desc: "Attended Project InnerSpace & GEODE Student Days to present on GtX research and learn about geothermal innovation." },
             { name: "Arctic Frontiers — Tromsø, Norway", year: "2026", lat: 69.6492, lng: 18.9553, desc: "Presented Geothermal-to-X maritime refueling research; PeerJ Award winner; invited returnee." },
             { name: "Yukon Flats & Dalton Highway, AK", year: "2026", lat: 66.5622, lng: -145.3120, desc: "Inspiration for 'Arctic Arteries' Art of Science submission." },
-
-            // Groundwater & Hydrogeology
             { name: "Green Lakes State Park — Syracuse, NY", year: "2024", lat: 43.0490, lng: -75.9730, desc: "Evaluated Submarine Groundwater Discharge (SGD) detection in meromictic lakes (GPR, ERT, temperature probes)." },
             { name: "Rapa Nui Submarine Groundwater Discharge", year: "2022 - 2024", lat: -27.1127, lng: -109.3497, desc: "Evaluated the seasonality of submarine groundwater discharge (SGD) using Thermal Infrared (TIR) UAV imagery." },
-            
-            // Research & Field Courses
             { name: "Kilauea Summit Collapse, HI", year: "2025", lat: 19.4069, lng: -155.2834, desc: "Mapped 2018 summit collapse seismicity during Texas A&M Summer Workshop." },
             { name: "Direct Use Geothermal — Binghamton, NY", year: "2024 - 2025", lat: 42.0987, lng: -75.9180, desc: "Synthesized 1,000+ well records across NY/PA for deep direct use geothermal evaluation." },
             { name: "Everglades Field Course, FL", year: "2023", lat: 25.2866, lng: -80.8987, desc: "Field course in Everglades National Park." },
@@ -416,7 +407,7 @@
             L.marker([loc.lat, loc.lng], { icon: customIcon }).addTo(map).bindPopup(popup);
         });
 
-        /* 2. CATEGORY FILTER SYSTEM */
+        /* 2.  FILTER SYSTEM */
         const filterBtns = document.querySelectorAll('.filter-btn');
         const cards = document.querySelectorAll('.portfolio-card');
 
@@ -437,7 +428,7 @@
             });
         });
 
-        /* 3. LIGHTBOX SYSTEM */
+        /* 3. LIGHTBOX  */
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxVid = document.getElementById('lightbox-vid');
@@ -478,7 +469,7 @@
             }
         });
 
-        // Prevent dragging/context menu on images
+        // PREVENT DRAGGING
         document.querySelectorAll('img').forEach(img => {
             img.addEventListener('contextmenu', e => e.preventDefault());
             img.addEventListener('dragstart', e => e.preventDefault());
